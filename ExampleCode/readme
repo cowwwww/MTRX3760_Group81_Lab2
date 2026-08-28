@@ -1,0 +1,39 @@
+Example code for MTRX3760 Lab 2.
+
+This folder holds two small, independent pieces you can build on, each with a
+demonstration program, plus two example data files.
+
+CRender.h and CRender.cpp are a supplied wrapper class around the raylib
+graphics library. It hides raylib behind a small interface, so the rest of
+your program never includes raylib.h and never sees a raylib type. The
+instructions for installing raylib are at the top of CRender.h.
+
+TestRender.cpp is a worked demonstration of using CRender: a screenful of
+bouncing, tethered balls. It is an example to read, build and run, not a
+starting template.
+
+CLoopReader.h and CLoopReader.cpp are a supplied reader for loop files. A loop
+file describes one closed loop as a name, a starting pose and a list of
+vertices; CLoopReader reads such a file and stores what it finds. The file
+format is described at the top of CLoopReader.h.
+
+TestLoopReader.cpp is a worked demonstration of using CLoopReader together with
+CRender: it loads a loop file and draws the loop on screen. Like TestRender, it
+is an example, not a template.
+
+SimpleWalls.map and SimpleLine.map are two example loop files. SimpleWalls.map
+is the walls of a room; SimpleLine.map is a line on the floor, sitting inside
+that room. TestLoopReader can load either one.
+
+Getting going:
+
+1. Install raylib. Instructions are inside CRender.h. There are two routes,
+   one if you have sudo on your own machine and one for the lab machines,
+   where you do not. Follow the one that applies to you.
+
+2. Compile and run TestRender.cpp, then TestLoopReader.cpp. Build instructions
+   are at the top of each file, and the exact build command depends on which
+   install route you took.
+
+Once that's working, you're all set to start designing and building the
+program requested in the Lab 2 handout.
