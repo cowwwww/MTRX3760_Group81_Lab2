@@ -1,0 +1,17 @@
+<library path="polygon_plugins">
+  <class type="polygon_plugins::Square"
+         base_class_type="polygon_base::RegularPolygon">
+    <description>Square polygon plugin.</description>
+  </class>
+
+  <class type="polygon_plugins::Triangle"
+         base_class_type="polygon_base::RegularPolygon"
+         name="awesome_triangle">
+    <description>Triangle polygon plugin.</description>
+  </class>
+
+  <class type="polygon_plugins::House"
+         base_class_type="polygon_base::RegularPolygon">
+    <description>House made from one square and one triangle.</description>
+  </class>
+</library>
