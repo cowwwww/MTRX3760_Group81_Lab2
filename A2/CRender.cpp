@@ -1,7 +1,7 @@
 //-----------------------------------------------------------------------------
 // CRender.cpp
 //
-// The only file in the simulator that accesses raylib directly.
+// This file does the raylib drawing.
 //-----------------------------------------------------------------------------
 
 #include "CRender.h"

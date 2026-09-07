@@ -1,14 +1,14 @@
 //-----------------------------------------------------------------------------
 // CRender.h
 //
-// Small C++ interface around raylib for MTRX3760 Lab 2. The rest of the
-// simulator uses only this class and does not call raylib directly.
+// Small wrapper around raylib.
+// Other files use this class for drawing.
 //-----------------------------------------------------------------------------
 
 #ifndef CRENDER_H
 #define CRENDER_H
 
-// A simple 2D point used throughout the simulator.
+// Simple 2D point.
 struct Vec2D
 {
     float x;
@@ -18,7 +18,7 @@ struct Vec2D
 class CRender
 {
     public:
-        // Drawing styles keep raylib colours inside CRender.
+        // Drawing styles used by CRender.
         enum EStyle
         {
             WALL,

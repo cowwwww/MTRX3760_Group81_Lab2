@@ -6,9 +6,6 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_FLAGS "-Wall -Wextra -Wshadow -Wnon-virtual-dtor -pedantic")
 
-# Location of raylib installed by Homebrew.
-set(raylib_DIR "/opt/homebrew/Cellar/raylib/6.0/lib/cmake/raylib")
-
 find_package(raylib CONFIG REQUIRED)
 
 add_executable(robot_simulator

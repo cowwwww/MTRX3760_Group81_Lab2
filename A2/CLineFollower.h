@@ -1,7 +1,7 @@
 //-----------------------------------------------------------------------------
 // CLineFollower.h
 //
-// A robot that follows the floor line using exactly two binary line sensors.
+// Robot for following the floor line.
 //-----------------------------------------------------------------------------
 
 #ifndef CLINEFOLLOWER_H

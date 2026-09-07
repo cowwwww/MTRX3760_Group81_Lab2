@@ -1,7 +1,7 @@
 //-----------------------------------------------------------------------------
 // CSimulation.h
 //
-// A5 simulation: 20 wall followers and 20 line followers with random noise.
+// Main simulation class for A5.
 //-----------------------------------------------------------------------------
 
 #ifndef CSIMULATION_H
@@ -18,6 +18,8 @@ class CSimulation
     public:
         CSimulation();
         ~CSimulation();
+        CSimulation( const CSimulation& ) = delete;
+        CSimulation& operator=( const CSimulation& ) = delete;
 
         void Run();
 

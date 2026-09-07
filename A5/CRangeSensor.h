@@ -1,7 +1,7 @@
 //-----------------------------------------------------------------------------
 // CRangeSensor.h
 //
-// A range sensor mounted at a fixed angle on the robot.
+// Range sensor for checking wall distance.
 //-----------------------------------------------------------------------------
 
 #ifndef CRANGESENSOR_H

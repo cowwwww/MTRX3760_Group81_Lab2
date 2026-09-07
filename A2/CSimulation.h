@@ -1,7 +1,7 @@
 //-----------------------------------------------------------------------------
 // CSimulation.h
 //
-// Top-level owner for the A2 simulation containing both robot types.
+// Main simulation class for A2.
 //-----------------------------------------------------------------------------
 
 #ifndef CSIMULATION_H

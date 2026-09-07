@@ -1,8 +1,8 @@
 //-----------------------------------------------------------------------------
 // CRobot.h
 //
-// Common movement, collision handling, trail recording, and lap detection for
-// a two-wheel robot. A derived class decides the wheel speeds from its sensors.
+// Common robot movement code.
+// Child classes choose the wheel speeds.
 //-----------------------------------------------------------------------------
 
 #ifndef CROBOT_H

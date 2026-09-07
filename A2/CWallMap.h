@@ -1,7 +1,7 @@
 //-----------------------------------------------------------------------------
 // CWallMap.h
 //
-// Holds the room walls and floor line, and answers geometric sensor queries.
+// Stores the walls and the floor line.
 //-----------------------------------------------------------------------------
 
 #ifndef CWALLMAP_H

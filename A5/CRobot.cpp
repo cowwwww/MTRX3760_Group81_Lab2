@@ -156,7 +156,7 @@ void CRobot::Move()
 
     if( mrWallMap.CollidesWithWall( nextPose.mPosition, float( mRadius ) ) )
     {
-        // Collisions are not counted for A5, but the wall still remains solid.
+        // Wall is still solid in A5.
         mPose.mHeading = nextPose.mHeading;
     }
     else

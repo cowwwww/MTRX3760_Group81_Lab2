@@ -154,8 +154,7 @@ void CRobot::Move()
         std::cout << "Collision: " << mName
                   << " at update " << mUpdateCount << std::endl;
 
-        // Keep the new heading so the controller can turn away from the wall,
-        // but do not allow the robot centre to move through the wall.
+        // Let it turn, but do not move through the wall.
         mPose.mHeading = nextPose.mHeading;
     }
     else

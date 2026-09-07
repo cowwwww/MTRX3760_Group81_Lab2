@@ -1,7 +1,7 @@
 //-----------------------------------------------------------------------------
 // CWallFollower.h
 //
-// A robot that follows the wall on its right using exactly two range sensors.
+// Robot for following the right wall.
 //-----------------------------------------------------------------------------
 
 #ifndef CWALLFOLLOWER_H

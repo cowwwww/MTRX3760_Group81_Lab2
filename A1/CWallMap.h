@@ -1,7 +1,8 @@
 //-----------------------------------------------------------------------------
 // CWallMap.h
 //
-// Holds the wall map and provides the geometric questions needed by the robot.
+// Stores the wall map.
+// Also checks distance and collision.
 //-----------------------------------------------------------------------------
 
 #ifndef CWALLMAP_H

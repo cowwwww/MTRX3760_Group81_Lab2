@@ -13,7 +13,7 @@ CSimulation::CSimulation()
       mLineFollower( mWallMap ),
       mSummaryPrinted( false )
 {
-    // The simulation knows both objects only through the CRobot interface.
+    // Store both robots in one list.
     mRobots.push_back( &mWallFollower );
     mRobots.push_back( &mLineFollower );
 }

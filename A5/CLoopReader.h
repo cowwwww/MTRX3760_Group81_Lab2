@@ -1,8 +1,8 @@
 //-----------------------------------------------------------------------------
 // CLoopReader.h
 //
-// Reads one closed loop from a .map file. The file format is the same as the
-// supplied Lab 2 example: loop, startpose, and vertex instructions.
+// Reads one loop from a .map file.
+// It uses the Lab 2 file format.
 //-----------------------------------------------------------------------------
 
 #ifndef CLOOPREADER_H

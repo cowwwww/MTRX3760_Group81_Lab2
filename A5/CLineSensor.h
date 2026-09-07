@@ -1,7 +1,7 @@
 //-----------------------------------------------------------------------------
 // CLineSensor.h
 //
-// A binary floor sensor mounted at a fixed position on the robot.
+// Floor sensor for checking the line.
 //-----------------------------------------------------------------------------
 
 #ifndef CLINESENSOR_H

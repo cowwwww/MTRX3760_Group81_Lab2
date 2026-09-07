@@ -1,8 +1,8 @@
 //-----------------------------------------------------------------------------
 // CRobot.h
 //
-// A5 version of the common robot. It adds small random offsets to the starting
-// pose and to the distance travelled by each wheel on every update.
+// Common robot code for A5.
+// It adds small random errors.
 //-----------------------------------------------------------------------------
 
 #ifndef CROBOT_H
