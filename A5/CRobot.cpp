@@ -142,8 +142,7 @@ float CRobot::RandomOffset( float aMagnitude ) const
 
 void CRobot::Move()
 {
-    // Noise is applied directly to wheel travel distance, matching the A5
-    // requirement rather than changing the controller's requested speed.
+    // Add noise to wheel travel.
     float leftDistance = mLeftWheelSpeed * mTimeStep + RandomOffset( mWheelDistanceNoise );
     float rightDistance = mRightWheelSpeed * mTimeStep + RandomOffset( mWheelDistanceNoise );
 

@@ -18,9 +18,8 @@ CLineFollower::CLineFollower( CWallMap& arWallMap )
 
 void CLineFollower::Control()
 {
-    // The first sensor normally sits over the line. The second is to its right.
-    // This gives three useful cases: centred, line to the right, or line lost
-    // to the left. The controller turns according to those sensor states.
+    // Main sensor is on the line.
+    // Side sensor helps with turning.
     const float forwardSpeed = 30.0f;
     const float turnAmount = 30.0f;
 

@@ -18,9 +18,8 @@ CWallFollower::CWallFollower( CWallMap& arWallMap )
 
 void CWallFollower::Control()
 {
-    // The two sensor readings drive a simple reactive controller. The
-    // front-right sensor turns the robot away before an inside corner, while
-    // the right sensor keeps the robot beside the wall and finds outside turns.
+    // Two sensors are used here.
+    // One checks the side, one checks the front-right corner.
     const float forwardSpeed = 45.0f;
     const float gentleTurn = 8.0f;
     const float strongTurn = 25.0f;
@@ -34,12 +33,12 @@ void CWallFollower::Control()
 
     if( frontRightDistance < frontCornerDistance )
     {
-        // Obstacle ahead-right: turn left, away from the wall.
+        // Wall ahead-right, so turn left.
         SetWheelSpeeds( forwardSpeed - strongTurn, forwardSpeed + strongTurn );
     }
     else if( rightDistance > lostWallDistance )
     {
-        // The wall has ended at an outside corner: turn right to find it again.
+        // Wall is lost, so turn right.
         SetWheelSpeeds( forwardSpeed + strongTurn, forwardSpeed - strongTurn );
     }
     else if( rightDistance > desiredDistance + distanceTolerance )
