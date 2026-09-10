@@ -18,7 +18,7 @@ class CWallFollower : public CRobot
         CWallFollower( CWallMap& arWallMap );
 
     protected:
-        void Control();
+        void Control() override;
 
     private:
         CRangeSensor mRightSensor;

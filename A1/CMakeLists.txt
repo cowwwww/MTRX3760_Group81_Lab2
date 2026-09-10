@@ -4,6 +4,7 @@ project(wall_follower)
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_FLAGS "-Wall -Wextra -Wshadow -Wnon-virtual-dtor -pedantic")
 
 find_package(raylib CONFIG REQUIRED)
 
@@ -19,3 +20,5 @@ add_executable(wall_follower
 )
 
 target_link_libraries(wall_follower PRIVATE raylib)
+
+configure_file(SimpleWalls.map SimpleWalls.map COPYONLY)

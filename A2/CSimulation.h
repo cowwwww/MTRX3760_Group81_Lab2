@@ -18,6 +18,9 @@ class CSimulation
 {
     public:
         CSimulation();
+        CSimulation( const CSimulation& ) = delete;
+        CSimulation& operator=( const CSimulation& ) = delete;
+
         void Run();
 
     private:

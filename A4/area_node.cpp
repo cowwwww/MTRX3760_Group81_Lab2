@@ -9,6 +9,7 @@
 
 #include <cstdio>
 #include <memory>
+#include <stdexcept>
 
 int main( int argc, char** argv )
 {
@@ -37,10 +38,22 @@ int main( int argc, char** argv )
         std::printf( "Square area: %.2f\n", square->area() );
         std::printf( "Triangle area: %.2f\n", triangle->area() );
         std::printf( "House area: %.2f\n", house->area() );
+
+        try
+        {
+            house->initialize( 0.0 );
+            std::printf( "Validation test: FAILED\n" );
+            return 1;
+        }
+        catch( const std::invalid_argument& )
+        {
+            std::printf( "Validation test: non-positive side length rejected\n" );
+        }
     }
-    catch( pluginlib::PluginlibException& ex )
+    catch( const pluginlib::PluginlibException& ex )
     {
         std::printf( "Plugin load failed: %s\n", ex.what() );
+        return 1;
     }
 
     return 0;

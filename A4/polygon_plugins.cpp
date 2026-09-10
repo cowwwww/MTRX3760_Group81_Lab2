@@ -9,6 +9,7 @@
 #include <polygon_base/regular_polygon.hpp>
 
 #include <cmath>
+#include <stdexcept>
 
 namespace polygon_plugins
 {
@@ -21,12 +22,17 @@ class Square : public polygon_base::RegularPolygon
         {
         }
 
-        void initialize( double aSideLength )
+        void initialize( double aSideLength ) override
         {
+            if( aSideLength <= 0.0 )
+            {
+                throw std::invalid_argument( "Square side length must be positive" );
+            }
+
             mSideLength = aSideLength;
         }
 
-        double area()
+        double area() override
         {
             return mSideLength * mSideLength;
         }
@@ -43,12 +49,17 @@ class Triangle : public polygon_base::RegularPolygon
         {
         }
 
-        void initialize( double aSideLength )
+        void initialize( double aSideLength ) override
         {
+            if( aSideLength <= 0.0 )
+            {
+                throw std::invalid_argument( "Triangle side length must be positive" );
+            }
+
             mSideLength = aSideLength;
         }
 
-        double area()
+        double area() override
         {
             return 0.5 * mSideLength * GetHeight();
         }
@@ -66,7 +77,7 @@ class Triangle : public polygon_base::RegularPolygon
 class House : public polygon_base::RegularPolygon
 {
     public:
-        void initialize( double aSideLength )
+        void initialize( double aSideLength ) override
         {
             // A house has a square body and a triangular roof. Both parts use
             // the same side length, as required by the lab specification.
@@ -74,7 +85,7 @@ class House : public polygon_base::RegularPolygon
             mTriangle.initialize( aSideLength );
         }
 
-        double area()
+        double area() override
         {
             return mSquare.area() + mTriangle.area();
         }

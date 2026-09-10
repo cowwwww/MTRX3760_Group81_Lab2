@@ -18,7 +18,7 @@ class CLineFollower : public CRobot
         CLineFollower( CWallMap& arWallMap );
 
     protected:
-        void Control();
+        void Control() override;
 
     private:
         CLineSensor mLineSensor;
